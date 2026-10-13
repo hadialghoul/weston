@@ -47,40 +47,19 @@ form.addEventListener("submit", async (event) => {
   }
 
   formError.hidden = true;
-  formSuccess.hidden = true;
-  submitButton.disabled = true;
-  submitButton.textContent = "Sending";
-
-  try {
-    const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(inbox)}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: JSON.stringify({
-        name,
-        phone,
-        email,
-        message,
-        _replyto: email,
-        _subject: "Estate care visit request",
-        _template: "table",
-        _captcha: "false"
-      })
-    });
-
-    if (!response.ok) {
-      throw new Error("Request was not accepted");
-    }
-
-    form.reset();
-    formSuccess.hidden = false;
-  } catch (error) {
-    formError.textContent = "The request did not send. Call (339) 213-5576 or email Hussein directly.";
-    formError.hidden = false;
-  } finally {
-    submitButton.disabled = false;
-    submitButton.textContent = "Send the request";
-  }
+  const body = [
+    `Name: ${name}`,
+    `Phone: ${phone}`,
+    `Email: ${email}`,
+    "",
+    message
+  ].join("\n");
+  const mailto = `mailto:${inbox}?subject=${encodeURIComponent("Estate care visit request")}&body=${encodeURIComponent(body)}`;
+  const link = document.createElement("a");
+  link.href = mailto;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  formSuccess.hidden = false;
+  submitButton.disabled = false;
 });
