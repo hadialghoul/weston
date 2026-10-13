@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,560;9..144,640&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,7 +50,7 @@
 
       <nav class="nav" id="site-nav" data-nav>
         <a href="#care">Estate care</a>
-        <a href="#work">The work</a>
+        <a href="#about">About</a>
         <a href="#visit">The visit</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -188,34 +188,41 @@
       </ol>
     </section>
 
-    <section class="work" id="work">
-      <div class="work-media">
-        <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=80"
-          alt="A calm, finished living room with natural light"
-          width="1400"
-          height="933">
+    <section class="about" id="about">
+      <div class="about-top">
+        <div class="work-media">
+          <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=80"
+            alt="A calm, finished living room with natural light"
+            width="1400"
+            height="933">
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">About us</p>
+          <h2>Protecting your most valuable asset with proactive estate care.</h2>
+          <p>At Weston Handyman, we believe that the best way to handle a major home repair is to prevent it from ever happening.</p>
+          <p>Our founder, Hussein, has been a dedicated professional in the construction and property management field since 2016, earning an official Home Improvement Contractor License in 2021. For years, our team was trusted to manage the rigorous upkeep of commercial buildings and complex rental properties. Through that intense experience, we noticed a major gap in the residential market: traditional handymen are only called after something breaks, which often results in massive stress and expensive repair bills for the homeowner.</p>
+          <p>That realization inspired our new, modern business model. We shifted our focus from reactive emergency fixes to dedicated, ongoing care for existing estates that require diligent upkeep.</p>
+        </div>
       </div>
-      <div class="work-copy">
-        <p class="eyebrow">How the month is used</p>
-        <h2>Maintenance first. Then the visible work.</h2>
-        <p>
-          Each visit starts with what would fail if it waited — then moves to painting, kitchens, bathrooms, and the grounds. The list is set with you, and it changes with the season.
-        </p>
-        <dl class="facts">
-          <div>
-            <dt>Price</dt>
-            <dd>$349 per month</dd>
-          </div>
-          <div>
-            <dt>Visit</dt>
-            <dd>3 visits a month</dd>
-          </div>
-          <div>
-            <dt>License</dt>
-            <dd>HIC #203617</dd>
-          </div>
-        </dl>
+      <div class="about-approach">
+        <h3>Our prevention-first approach</h3>
+        <p>We treat your home with the same structural oversight used for commercial properties. We don’t just show up when there is an emergency — we partner with you to keep your estate in pristine condition year-round.</p>
+        <ul class="about-points">
+          <li>
+            <strong>Custom property files</strong>
+            We build a digital blueprint and historical record of your property’s specific structure, age, and equipment.
+          </li>
+          <li>
+            <strong>Comprehensive checklists</strong>
+            Every estate on our list receives an individual, meticulously designed preventative maintenance checklist.
+          </li>
+          <li>
+            <strong>Monthly wellness visits</strong>
+            We visit your home three times every month to inspect, tune up, and catch minor issues before they snowball into overwhelming, budget-breaking projects.
+          </li>
+        </ul>
+        <p class="about-close">With a licensed contractor overseeing your estate’s monthly care, you can finally stop worrying about home maintenance and simply enjoy your property.</p>
       </div>
     </section>
 
@@ -265,7 +272,7 @@
         </address>
       </div>
 
-      <form class="contact-form" id="visit-form" novalidate>
+      <form class="contact-form" id="visit-form" data-inbox="Hussein@westonhandyman.estate" novalidate>
         <div class="field">
           <label for="name">Name</label>
           <input id="name" name="name" type="text" autocomplete="name" required>
@@ -285,8 +292,9 @@
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
         <p class="form-error" id="form-error" role="alert" hidden>Add your name, a way to reach you, and a short note.</p>
+        <p class="form-success" id="form-success" role="status" hidden>Request sent. Hussein has your note at Hussein@westonhandyman.estate.</p>
         <button class="btn btn-light" type="submit">Send the request</button>
-        <p class="form-note">Opens an email to Hussein@westonhandyman.estate with the note filled in.</p>
+        <p class="form-note">This sends the request to Hussein. You stay on this page.</p>
       </form>
     </section>
   </main>
@@ -303,6 +311,6 @@
     <p class="footer-copy">© <span id="year"></span> Weston Handyman</p>
   </footer>
 
-  <script src="main.js?v=5"></script>
+  <script src="main.js?v=6"></script>
 </body>
 </html>

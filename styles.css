@@ -377,7 +377,8 @@ h1, h2, h3, p {
 .care,
 .visit,
 .contact,
-.work {
+.work,
+.about {
   max-width: 1180px;
   margin: 0 auto;
   padding: 5.5rem 1.5rem;
@@ -391,6 +392,7 @@ h1, h2, h3, p {
 
 .section-intro h2,
 .work-copy h2,
+.about-copy h2,
 .visit-head h2,
 .contact-intro h2 {
   font-family: var(--serif);
@@ -498,6 +500,70 @@ h1, h2, h3, p {
 .facts dd {
   margin: 0;
   font-weight: 500;
+}
+
+.about-top {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-copy p,
+.about-approach > p,
+.about-close {
+  margin-top: 1rem;
+  color: var(--ink-soft);
+}
+
+.about-approach {
+  margin-top: 3.2rem;
+}
+
+.about-approach h3 {
+  font-family: var(--serif);
+  font-weight: 560;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  letter-spacing: -0.03em;
+}
+
+.about-points {
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+}
+
+.about-points li {
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+
+.about-points li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.about-points strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 560;
+  font-size: 1.3rem;
+}
+
+.about-close {
+  max-width: 44rem;
+}
+
+.form-success {
+  margin: 0 0 0.8rem;
+  color: #d7e7d4;
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
 }
 
 .visit {
@@ -735,6 +801,7 @@ h1, h2, h3, p {
 
   .hero,
   .work,
+  .about-top,
   .contact,
   .steps,
   .credentials,
@@ -770,6 +837,7 @@ h1, h2, h3, p {
   .care,
   .visit,
   .work,
+  .about,
   .contact {
     padding: 3.5rem 1.25rem;
     scroll-margin-top: 1.75rem;
